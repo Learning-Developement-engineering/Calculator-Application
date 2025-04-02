@@ -31,3 +31,11 @@ build/
 
 ### VS Code ###
 .vscode/
+
+
+# Ignore SonarQube configuration file
+sonar-project.properties
+
+# Ignore SonarQube logs
+sonar.log
+.gitattributes
