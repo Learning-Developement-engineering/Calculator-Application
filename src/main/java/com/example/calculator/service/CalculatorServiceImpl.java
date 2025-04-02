@@ -25,6 +25,11 @@ public class CalculatorServiceImpl implements CalculatorService {
         if (b == 0) {
             throw new ArithmeticException("Division by zero is not allowed");
         }
+
+        if (a == 0) {
+            return 0.0; // Always return positive zero regardless of denominator sign
+        }
+
         return a / b;
     }
 }
