@@ -23,13 +23,13 @@ public class CalculatorServiceImpl implements CalculatorService {
     @Override
     public double divide(double a, double b) {
         if (b == 0) {
-            throw new ArithmeticException("Division by zero is not allowed");
+            throw new ArithmeticException("Division by zero");
         }
-
-        if (a == 0) {
-            return 0.0; // Always return positive zero regardless of denominator sign
-        }
-
         return a / b;
+    }
+
+    @Override
+    public double power(double base, double exponent) {
+        return Math.pow(base, exponent);
     }
 }

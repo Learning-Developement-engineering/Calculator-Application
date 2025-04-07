@@ -42,4 +42,9 @@ public class CalculatorController {
             return ResponseEntity.badRequest().build();
         }
     }
+
+    @GetMapping("/power")
+    public ResponseEntity<Double> power(@RequestParam double base, @RequestParam double exponent) {
+        return ResponseEntity.ok(calculatorService.power(base, exponent));
+    }
 }
