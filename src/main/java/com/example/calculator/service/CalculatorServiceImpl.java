@@ -25,6 +25,10 @@ public class CalculatorServiceImpl implements CalculatorService {
         if (b == 0) {
             throw new ArithmeticException("Division by zero");
         }
+        // Handle zero numerator specifically to ensure +0.0 rather than -0.0
+        if (a == 0) {
+            return 0.0;
+        }
         return a / b;
     }
 
