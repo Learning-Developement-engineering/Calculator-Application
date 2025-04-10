@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="calculator">
+    <h1>Calculator</h1>
+
+    <div class="input-group">
+        <label for="firstNumber">First Number</label>
+        <input type="number" id="firstNumber" placeholder="Enter the first number">
+    </div>
+
+    <div class="input-group">
+        <label for="secondNumber">Second Number</label>
+        <input type="number" id="secondNumber" placeholder="Enter the second number">
+    </div>
+
+    <div class="buttons">
+        <button class="add" onclick="calculate('add')">Add</button>
+        <button class="subtract" onclick="calculate('subtract')">Subtract</button>
+        <button class="multiply" onclick="calculate('multiply')">Multiply</button>
+        <button class="divide" onclick="calculate('divide')">Divide</button>
+    </div>
+
+    <div class="result" id="result">
+        Result will appear here
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
