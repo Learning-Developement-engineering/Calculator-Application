@@ -7,31 +7,84 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="calculator">
-    <h1>Calculator</h1>
-
-    <div class="input-group">
-        <label for="firstNumber">First Number</label>
-        <input type="number" id="firstNumber" placeholder="Enter the first number">
+    <div class="calculator">
+        <h1>Calculator</h1>
+        
+        <div class="tab-container">
+            <button class="tab-button active" onclick="openTab('basic')">Basic</button>
+            <button class="tab-button" onclick="openTab('percentage')">Percentage</button>
+        </div>
+        
+        <div id="basic" class="tab-content active">
+            <!-- Existing basic calculator content -->
+            <div class="input-group">
+                <label for="firstNumber">First Number</label>
+                <input type="number" id="firstNumber" placeholder="Enter the first number">
+            </div>
+            
+            <div class="input-group">
+                <label for="secondNumber">Second Number</label>
+                <input type="number" id="secondNumber" placeholder="Enter the second number">
+            </div>
+            
+            <div class="buttons">
+                <button class="add" onclick="calculate('add')">Add</button>
+                <button class="subtract" onclick="calculate('subtract')">Subtract</button>
+                <button class="multiply" onclick="calculate('multiply')">Multiply</button>
+                <button class="divide" onclick="calculate('divide')">Divide</button>
+            </div>
+        </div>
+        
+        <div id="percentage" class="tab-content">
+            <!-- New percentage calculator content -->
+            <div class="percentage-option">
+                <h3>Calculate Percentage of Value</h3>
+                <div class="input-group">
+                    <label for="percentageValue">Value</label>
+                    <input type="number" id="percentageValue" placeholder="Enter value">
+                </div>
+                <div class="input-group">
+                    <label for="percentagePercent">Percentage</label>
+                    <input type="number" id="percentagePercent" placeholder="Enter percentage">
+                </div>
+                <button class="calculate-btn" onclick="calculatePercentage('percentage')">Calculate</button>
+                <p class="description">Calculate X% of Y (e.g., 10% of 200 = 20)</p>
+            </div>
+            
+            <div class="percentage-option">
+                <h3>Calculate Percentage Between Values</h3>
+                <div class="input-group">
+                    <label for="percentagePart">Part</label>
+                    <input type="number" id="percentagePart" placeholder="Enter part value">
+                </div>
+                <div class="input-group">
+                    <label for="percentageTotal">Total</label>
+                    <input type="number" id="percentageTotal" placeholder="Enter total value">
+                </div>
+                <button class="calculate-btn" onclick="calculatePercentage('percentageOf')">Calculate</button>
+                <p class="description">Calculate what percentage X is of Y (e.g., 20 is 10% of 200)</p>
+            </div>
+            
+            <div class="percentage-option">
+                <h3>Calculate Percentage Change</h3>
+                <div class="input-group">
+                    <label for="percentageOldValue">Old Value</label>
+                    <input type="number" id="percentageOldValue" placeholder="Enter old value">
+                </div>
+                <div class="input-group">
+                    <label for="percentageNewValue">New Value</label>
+                    <input type="number" id="percentageNewValue" placeholder="Enter new value">
+                </div>
+                <button class="calculate-btn" onclick="calculatePercentage('percentageChange')">Calculate</button>
+                <p class="description">Calculate percentage change from X to Y (e.g., 100 to 120 is a 20% increase)</p>
+            </div>
+        </div>
+        
+        <div class="result" id="result">
+            Result will appear here
+        </div>
     </div>
 
-    <div class="input-group">
-        <label for="secondNumber">Second Number</label>
-        <input type="number" id="secondNumber" placeholder="Enter the second number">
-    </div>
-
-    <div class="buttons">
-        <button class="add" onclick="calculate('add')">Add</button>
-        <button class="subtract" onclick="calculate('subtract')">Subtract</button>
-        <button class="multiply" onclick="calculate('multiply')">Multiply</button>
-        <button class="divide" onclick="calculate('divide')">Divide</button>
-    </div>
-
-    <div class="result" id="result">
-        Result will appear here
-    </div>
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

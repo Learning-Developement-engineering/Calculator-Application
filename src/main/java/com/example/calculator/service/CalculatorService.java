@@ -6,4 +6,7 @@ public interface CalculatorService {
     double multiply(double a, double b);
     double divide(double a, double b);
     double power(double base, double exponent);
+    double percentage(double value, double percent);
+    double percentageOf(double part, double total);
+    double percentageChange(double oldValue, double newValue);
 }
