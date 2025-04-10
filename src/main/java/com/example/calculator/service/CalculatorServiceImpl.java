@@ -58,6 +58,14 @@ public class CalculatorServiceImpl implements CalculatorService {
         if (oldValue == 0) {
             throw new ArithmeticException("Old value cannot be zero");
         }
-        return ((newValue - oldValue) / Math.abs(oldValue)) * 100;
+        
+        // For negative numbers, we need to handle the sign carefully
+        if (oldValue < 0 && newValue < 0) {
+            // Both negative - reverse the sign of the result
+            return -((newValue - oldValue) / Math.abs(oldValue)) * 100;
+        } else {
+            // Normal calculation
+            return ((newValue - oldValue) / Math.abs(oldValue)) * 100;
+        }
     }
 }
