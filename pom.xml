@@ -27,12 +27,12 @@
 		<url/>
 	</scm>
 
-	<properties>
+	<!-- <properties>
 		<sonar.organization>learning-developement-engineering</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
-	</properties>
+	</properties> -->
 
-	<!-- <properties>
+	<properties>
 		<java.version>21</java.version>
 		<sonar.host.url>https://sonarqube.cmss.in/</sonar.host.url>
 		<sonar.projectKey>in.cmss.nse_poc:calculator_app-spring_boot</sonar.projectKey>
@@ -42,10 +42,9 @@
 		<sonar.sources>src/main/java</sonar.sources>
 		<sonar.java.binaries>target/classes</sonar.java.binaries>
 		<sonar.java.source>21</sonar.java.source>
-		<sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/target/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
-		Force inclusion of all files
+		<sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/target/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths> <!-- Force inclusion of all files -->
 		<sonar.coverage.exclusions></sonar.coverage.exclusions>
-	</properties> -->
+	</properties>
 
 	<dependencies>
 		<dependency>
