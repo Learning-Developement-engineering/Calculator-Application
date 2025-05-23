@@ -27,22 +27,34 @@
 		<url/>
 	</scm>
 
+<<<<<<< HEAD
 	<!-- <properties>
 		<sonar.organization>learning-developement-engineering</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties> -->
 
+=======
+>>>>>>> 1b724b3d0410608514cf2fce78b34614dcf3fcb6
 	<properties>
 		<java.version>21</java.version>
 		<sonar.host.url>https://sonarqube.cmss.in/</sonar.host.url>
 		<sonar.projectKey>in.cmss.nse_poc:calculator_app-spring_boot</sonar.projectKey>
 		<sonar.projectName>Calculator Application</sonar.projectName>
+<<<<<<< HEAD
 		<sonar.login>squ_d01846b579375d3f262540a5d0693d8d976b3e19</sonar.login>
+=======
+		<sonar.login>$SONAR_TOKEN</sonar.login>
+>>>>>>> 1b724b3d0410608514cf2fce78b34614dcf3fcb6
 		<sonar.sourceEncoding>UTF-8</sonar.sourceEncoding>
 		<sonar.sources>src/main/java</sonar.sources>
 		<sonar.java.binaries>target/classes</sonar.java.binaries>
 		<sonar.java.source>21</sonar.java.source>
+<<<<<<< HEAD
 		<sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/target/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths> <!-- Force inclusion of all files -->
+=======
+		<sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/target/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
+		<!-- Force inclusion of all files -->
+>>>>>>> 1b724b3d0410608514cf2fce78b34614dcf3fcb6
 		<sonar.coverage.exclusions></sonar.coverage.exclusions>
 	</properties>
 

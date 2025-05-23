@@ -169,4 +169,42 @@ class CalculatorServiceImplTest {
         // Test precision with recurring decimals
         assertEquals(0.3333333333333333, calculatorService.divide(1.0, 3.0), 1E-15);
     }
+<<<<<<< HEAD
+=======
+
+    @Test
+    void testPercentage() {
+        assertEquals(20.0, calculatorService.percentage(200.0, 10.0));
+        assertEquals(0.0, calculatorService.percentage(0.0, 10.0));
+        assertEquals(25.0, calculatorService.percentage(100.0, 25.0));
+        assertEquals(-15.0, calculatorService.percentage(-150.0, 10.0));
+    }
+
+    @Test
+    void testPercentageOf() {
+        assertEquals(10.0, calculatorService.percentageOf(20.0, 200.0));
+        assertEquals(25.0, calculatorService.percentageOf(25.0, 100.0));
+        assertEquals(200.0, calculatorService.percentageOf(100.0, 50.0));
+        assertEquals(100.0, calculatorService.percentageOf(-50.0, -50.0));
+    }
+
+    @Test
+    void testPercentageOfZeroTotal() {
+        assertThrows(ArithmeticException.class, () -> calculatorService.percentageOf(20.0, 0.0));
+    }
+
+    @Test
+    void testPercentageChange() {
+        assertEquals(20.0, calculatorService.percentageChange(100.0, 120.0));
+        assertEquals(-20.0, calculatorService.percentageChange(100.0, 80.0));
+        assertEquals(100.0, calculatorService.percentageChange(100.0, 200.0));
+        assertEquals(-50.0, calculatorService.percentageChange(100.0, 50.0));
+        assertEquals(100.0, calculatorService.percentageChange(-100.0, -200.0));
+    }
+
+    @Test
+    void testPercentageChangeZeroOldValue() {
+        assertThrows(ArithmeticException.class, () -> calculatorService.percentageChange(0.0, 20.0));
+    }
+>>>>>>> 1b724b3d0410608514cf2fce78b34614dcf3fcb6
 }
