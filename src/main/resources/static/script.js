@@ -1,15 +1,32 @@
+<<<<<<< HEAD
+=======
 // Existing calculate function
+>>>>>>> 1b724b3d0410608514cf2fce78b34614dcf3fcb6
 function calculate(operation) {
     // Get input values
     const firstNumber = parseFloat(document.getElementById('firstNumber').value);
     const secondNumber = parseFloat(document.getElementById('secondNumber').value);
     const resultElement = document.getElementById('result');
+<<<<<<< HEAD
+
+=======
     
+>>>>>>> 1b724b3d0410608514cf2fce78b34614dcf3fcb6
     // Check if inputs are valid numbers
     if (isNaN(firstNumber) || isNaN(secondNumber)) {
         resultElement.innerHTML = "<span class='error'>Please enter valid numbers</span>";
         return;
     }
+<<<<<<< HEAD
+
+    // Clear previous result
+    resultElement.textContent = "Calculating...";
+
+    // Set up API URL
+    const baseUrl = "http://localhost:8080/api/calculator/";
+    const url = `${baseUrl}${operation}?a=${firstNumber}&b=${secondNumber}`;
+
+=======
     
     // Clear previous result
     resultElement.textContent = "Calculating...";
@@ -18,6 +35,7 @@ function calculate(operation) {
     const baseUrl = "http://localhost:8080/api/calculator/";
     const url = `${baseUrl}${operation}?a=${firstNumber}&b=${secondNumber}`;
     
+>>>>>>> 1b724b3d0410608514cf2fce78b34614dcf3fcb6
     // Make API call
     fetch(url)
         .then(response => {
@@ -36,6 +54,8 @@ function calculate(operation) {
                 resultElement.innerHTML = `<span class='error'>Error: ${error.message}</span>`;
             }
         });
+<<<<<<< HEAD
+=======
 }
 
 // New function for percentage calculations
@@ -142,4 +162,5 @@ function openTab(tabName) {
     
     // Add active class to the clicked button
     event.currentTarget.classList.add('active');
+>>>>>>> 1b724b3d0410608514cf2fce78b34614dcf3fcb6
 }

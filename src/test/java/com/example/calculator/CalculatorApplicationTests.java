@@ -249,47 +249,4 @@ class CalculatorApplicationTests {
 	void testMainMethodCoverage() {
 		CalculatorApplication.main(new String[]{});
 	}
-
-	@Test
-    void testPercentageEndpoint() {
-        String url = "http://localhost:" + port + "/api/calculator/percentage?value=200&percent=10";
-        ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
-        
-        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
-        assertThat(response.getBody()).isEqualTo("20.0");
-    }
-
-    @Test
-    void testPercentageOfEndpoint() {
-        String url = "http://localhost:" + port + "/api/calculator/percentageOf?part=20&total=200";
-        ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
-        
-        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
-        assertThat(response.getBody()).isEqualTo("10.0");
-    }
-
-    @Test
-    void testPercentageOfZeroTotalEndpoint() {
-        String url = "http://localhost:" + port + "/api/calculator/percentageOf?part=20&total=0";
-        ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
-        
-        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.BAD_REQUEST);
-    }
-
-    @Test
-    void testPercentageChangeEndpoint() {
-        String url = "http://localhost:" + port + "/api/calculator/percentageChange?oldValue=100&newValue=120";
-        ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
-        
-        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
-        assertThat(response.getBody()).isEqualTo("20.0");
-    }
-
-    @Test
-    void testPercentageChangeZeroOldValueEndpoint() {
-        String url = "http://localhost:" + port + "/api/calculator/percentageChange?oldValue=0&newValue=120";
-        ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
-        
-        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.BAD_REQUEST);
-    }
 }

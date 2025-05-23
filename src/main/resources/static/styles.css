@@ -95,6 +95,8 @@ button:hover {
 .error {
     color: #F44336;
     font-size: 18px;
+<<<<<<< HEAD
+=======
 }
 
 /* Add these styles to your existing CSS */
@@ -167,4 +169,5 @@ button:hover {
 
 .calculate-btn:hover {
     opacity: 0.9;
+>>>>>>> 1b724b3d0410608514cf2fce78b34614dcf3fcb6
 }

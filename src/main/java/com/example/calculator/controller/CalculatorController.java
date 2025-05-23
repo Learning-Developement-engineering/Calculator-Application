@@ -47,31 +47,4 @@ public class CalculatorController {
     public ResponseEntity<Double> power(@RequestParam double base, @RequestParam double exponent) {
         return ResponseEntity.ok(calculatorService.power(base, exponent));
     }
-
-    @GetMapping("/percentage")
-    public ResponseEntity<Double> percentage(@RequestParam double value, @RequestParam double percent) {
-        try {
-            return ResponseEntity.ok(calculatorService.percentage(value, percent));
-        } catch (ArithmeticException e) {
-            return ResponseEntity.badRequest().build();
-        }
-    }
-    
-    @GetMapping("/percentageOf")
-    public ResponseEntity<Double> percentageOf(@RequestParam double part, @RequestParam double total) {
-        try {
-            return ResponseEntity.ok(calculatorService.percentageOf(part, total));
-        } catch (ArithmeticException e) {
-            return ResponseEntity.badRequest().build();
-        }
-    }
-    
-    @GetMapping("/percentageChange")
-    public ResponseEntity<Double> percentageChange(@RequestParam double oldValue, @RequestParam double newValue) {
-        try {
-            return ResponseEntity.ok(calculatorService.percentageChange(oldValue, newValue));
-        } catch (ArithmeticException e) {
-            return ResponseEntity.badRequest().build();
-        }
-    }
 }
